@@ -9,14 +9,18 @@ Para fazer o download do CSV atualizado até a data de hoje, basta executar o sc
 ```
 sh getCovid19CSVData.sh
 ```
+> ATENÇÃO: o arquivo "CSV" utiliza ";" como separador
+
 ###### Exemplos
-Pegando apenas os dados do estado do Rio de Janeiro
+1. Pegando apenas os dados do estado do Rio de Janeiro
 
 ```
 sh getCovid19CSVData.sh | sed '1p/;RJ;/!d'
 ```
 
-> ATENÇÃO: o arquivo "CSV" utiliza ";" como separador
+### Como contribuir
+Se shell script não era o que você estava procurando e você acha que pode contribuir usando outro tipo de linguagem de programação, fique a vontade em usar a mesma estratégia. Podemos adicionar o link do projeto aqui também.
+
 
 
 
