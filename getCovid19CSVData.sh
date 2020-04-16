@@ -11,7 +11,7 @@ for js in $js_files
 do
   # faz o download de cada javascript e procura pela dupla 
   # X-Parse-Application-Id e encodeURI do PortalGeral 
-  a=($(curl -s "https://covid.saude.gov.br/$js.js" | sed -e 's/^.*const G="\(.*\)amazonaws.com\/prod.*"X-Parse-Application-Id","\(.*\)"),this.http.get(encodeURI(G.*$/\2 \1amazonaws.com\/prod\/PortalGeral/g' | tr ' ' '\n'))
+  a=($(curl -s "https://covid.saude.gov.br/$js.js" | sed -n -e 's/^.*const \(.\)="\(.*\)prod".*\("X-Parse-Application-Id.*this.http.get.encodeURI.\1\).*$/\1=\2prod\/PortalGeral \3/g' -e 's/^\(.\)=\(.*\) "X-Parse-Application-Id","\(.*\)".*encodeURI(\1$/\3 \2/p' | tr ' ' '\n'))
 
   # Se as variaveis foram encontradas pegamos a url do arquivo csv e 
   # fazemos o dowload direto para o sdtout
@@ -20,7 +20,7 @@ do
 done
 
 #TODO: remove o diretorio covid.saude.gov.br ?
- rm -rf ./covid.saude.gov.br 
+# rm -rf ./covid.saude.gov.br 
 
 exit
 
