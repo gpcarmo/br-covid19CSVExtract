@@ -15,7 +15,7 @@ do
 
   # Se as variaveis foram encontradas pegamos a url do arquivo csv e 
   # fazemos o dowload direto para o sdtout
-  [ ! -z "${a[0]}" ] && [ ! -z "${a[1]}" ] && b=$(curl -s -H "X-Parse-Application-Id: ${a[0]}" "${a[1]}" | sed -e 's/^.*url":"\(.*\).csv".*$/\1.csv/g') && [ ! -z "$b" ] && curl -s $b && break
+  [ ! -z "${a[0]}" ] && [ ! -z "${a[1]}" ] && b=$(curl -s -H "X-Parse-Application-Id: ${a[0]}" "${a[1]}" | sed -e 's/^.*url":"\(.*\)_Download_COVID19_\(.*\).csv"},.*$/\1_Download_COVID19_\2.csv/g') && [ ! -z "$b" ] && curl -s $b && break
 
 done
 
