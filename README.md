@@ -10,7 +10,7 @@ If you thought about automate this process then you are in the right place.
 
 To download the latest CSV you can execute the following script:
 ```
-sh getCovid19CSVData.sh
+/bin/bash getCovid19CSVData.sh
 ```
 > ATTENTION: The "CSV" uses ";" as the separator 
 
@@ -18,7 +18,7 @@ sh getCovid19CSVData.sh
 1. Getting only the data from Rio de Janeiro state: 
 
 ```
-sh getCovid19CSVData.sh | sed '1p/;RJ;/!d'
+/bin/bash getCovid19CSVData.sh | sed '1p/;RJ;/!d'
 ```
 
 ### How to contribute

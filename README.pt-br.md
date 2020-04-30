@@ -9,7 +9,7 @@ Se você pensou em automatizar esse processo, então você está no lugar certo.
 
 Para fazer o download do CSV atualizado até a data de hoje, basta executar o script:
 ```
-sh getCovid19CSVData.sh
+/bin/bash getCovid19CSVData.sh
 ```
 > ATENÇÃO: o arquivo "CSV" utiliza ";" como separador
 
@@ -17,7 +17,7 @@ sh getCovid19CSVData.sh
 1. Pegando apenas os dados do estado do Rio de Janeiro
 
 ```
-sh getCovid19CSVData.sh | sed '1p/;RJ;/!d'
+/bin/bash getCovid19CSVData.sh | sed '1p/;RJ;/!d'
 ```
 
 ### Como contribuir
