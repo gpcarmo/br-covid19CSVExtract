@@ -20,7 +20,7 @@ do
 done
 
 #TODO: remove o diretorio covid.saude.gov.br ?
-# rm -rf ./covid.saude.gov.br 
+rm -rf ./covid.saude.gov.br 
 
 exit
 
