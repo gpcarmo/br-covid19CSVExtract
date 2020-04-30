@@ -1,25 +1,28 @@
 # br-covid19CSVExtract
-Extrai o CSV do site oficial do governo federal https://covid.saude.gov.br
 
-O Ministério da Saúde do Brasil fornece um Painel de casos de doença pelo coronavírus 2019 (COVID-19). No próprio painel existe um link para o download do arquivo CSV. 
+Extract CSV file from the oficial Brazilian Convid-19 Website (https://covid.saude.gov.br)
 
-Se você pensou em automatizar esse processo, então você está no lugar certo.
+*Read this in other languages: [English](README.md), [Português](README.pt-br.md).*
 
-Para fazer o download do CSV atualizado até a data de hoje, basta executar o script:
+The Brazililan official health authority provides a panel for all the cases of Covid19 in Brazil by states. You can find the download button to the actual CSV file. 
+
+If you thought about automate this process then you are in the right place.
+
+To download the latest CSV you can execute the following script:
 ```
 sh getCovid19CSVData.sh
 ```
-> ATENÇÃO: o arquivo "CSV" utiliza ";" como separador
+> ATTENTION: The "CSV" uses ";" as the separator 
 
-###### Exemplos
-1. Pegando apenas os dados do estado do Rio de Janeiro
+###### Examples
+1. Getting only the data from Rio de Janeiro state: 
 
 ```
 sh getCovid19CSVData.sh | sed '1p/;RJ;/!d'
 ```
 
-### Como contribuir
-Se shell script não era o que você estava procurando e você acha que pode contribuir usando outro tipo de linguagem de programação, fique a vontade em usar a mesma estratégia. Podemos adicionar o link do projeto aqui também.
+### How to contribute
+If Shell script is not what are you looking for and you think you can contribute using any other programming language, feel free to use the same strategy. I can also add a reference to your project. 
 
 
 
