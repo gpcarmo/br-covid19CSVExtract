@@ -1,4 +1,4 @@
-name: Script
+name: Script Test
 
 on:
   push:
