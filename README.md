@@ -1,3 +1,5 @@
+![Script Test](https://github.com/gpcarmo/br-covid19CSVExtract/workflows/Script%20Test/badge.svg)
+
 # br-covid19CSVExtract
 
 Extract CSV file from the oficial Brazilian Convid-19 Website (https://covid.saude.gov.br)

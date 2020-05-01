@@ -1,3 +1,5 @@
+![Script Test](https://github.com/gpcarmo/br-covid19CSVExtract/workflows/Script%20Test/badge.svg)
+
 # br-covid19CSVExtract
 Extrai o CSV do site oficial do governo federal https://covid.saude.gov.br
 
