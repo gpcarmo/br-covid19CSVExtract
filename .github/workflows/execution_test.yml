@@ -1,0 +1,33 @@
+name: Script
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  web_scraping_job:
+    name: Run web scraping
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run web scraping script (extract CSV)
+      shell: bash
+      run: $GITHUB_WORKSPACE/getCovid19CSVData.sh > latest_data.csv
+    - name: Upload csv file for this job
+        uses: actions/upload-artifact@v1
+        with:
+          name: covid19_br
+          path: latest_data.csv
+  display_results:
+    name: Display results
+    needs: web_scraping_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download result data from web_scraping_job
+        uses: actions/download-artifact@v1
+        with: 
+          name: covid19_br
+      - name: Print csv file
+        shell: bash
+        run: |
+          cat covid19_br/latest_data.csv
+    
