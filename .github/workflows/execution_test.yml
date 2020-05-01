@@ -13,10 +13,10 @@ jobs:
       shell: bash
       run: $GITHUB_WORKSPACE/getCovid19CSVData.sh > latest_data.csv
     - name: Upload csv file for this job
-        uses: actions/upload-artifact@v1
-        with:
-          name: covid19_br
-          path: latest_data.csv
+      uses: actions/upload-artifact@v1
+      with:
+        name: covid19_br
+        path: latest_data.csv
   display_results:
     name: Display results
     needs: web_scraping_job
