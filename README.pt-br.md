@@ -1,6 +1,9 @@
 ![Script Test](https://github.com/gpcarmo/br-covid19CSVExtract/workflows/Script%20Test/badge.svg)
 
 # br-covid19CSVExtract
+
+> :weary: Depois da ultima atuliazação do site oficial, o arquivo que antes era em formato CSV agora está sendo disponibilizado em formato MS Excel.
+
 Extrai o CSV do site oficial do governo federal https://covid.saude.gov.br
 
 *Ler este documento em outras línguas: [English](README.md), [Português](README.pt-br.md).*

@@ -2,6 +2,8 @@
 
 # br-covid19CSVExtract
 
+> :weary: the website now provides a MS Excel file instead of a CSV file.
+
 Extract CSV file from the oficial Brazilian Convid-19 Website (https://covid.saude.gov.br)
 
 *Read this in other languages: [English](README.md), [Português](README.pt-br.md).*
